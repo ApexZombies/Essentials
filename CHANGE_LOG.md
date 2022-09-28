@@ -4,7 +4,7 @@
 #### ``/Essentials/src/main/resources/config.yml``
 A few minor changes were made
 
-[efb8d6f](https://github.com/ApexZombies/Essentials/commit/9e2354a3a4ae9a439326f124ee88623f36cc8733)
+[9e2354a](https://github.com/ApexZombies/Essentials/commit/9e2354a3a4ae9a439326f124ee88623f36cc8733)
 
 ---
 #### ``/Essentials/src/main/resources/plugin.yml``
