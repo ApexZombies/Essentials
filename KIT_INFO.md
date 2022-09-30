@@ -98,8 +98,6 @@ kits:
 # 'delay' refers to the cooldown between how often you can use each kit, measured in seconds.
 # Set 'delay' to -1 for a one time kit.
 
-
-
 # +----------------------------------------------------------------+ #
 # |
 # |   HOW DO I MAKE THIS KIT, THE ONE PEOPLE GET WHEN
@@ -113,7 +111,6 @@ kits:
 # |      kit: newcomers
 # |
 # +----------------------------------------------------------------+ #
-
 
 kits:
   newcomers:
