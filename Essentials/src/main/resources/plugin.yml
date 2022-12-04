@@ -167,11 +167,11 @@ commands:
   gamemode:
     description: Change player gamemode.
     usage: /<command> <survival|creative|adventure|spectator> [player]
-    aliases: [adventure,eadventure,adventuremode,eadventuremode,creative,ecreative,eecreative,creativemode,ecreativemode,egamemode,gm,egm,gma,egma,gmc,egmc,gms,egms,gmt,egmt,survival,esurvival,survivalmode,esurvivalmode,gmsp,sp,egmsp,spec,spectator]
+    aliases: [egamemode,gm,egm,gma,egma,gmc,egmc,gms,egms,gmt,egmt,gmsp,sp,egmsp,spec,spectator]
   gc:
     description: Reports memory, uptime and tick info.
     usage: /<command>
-    aliases: [lag,elag,egc,mem,emem,memory,ememory,uptime,euptime,tps,etps,entities,eentities]
+    aliases: [lag,elag,egc,mem,emem,memory,ememory,uptime,euptime,entities,eentities]
   getpos:
     description: Get your current coordinates or those of a player.
     usage: /<command> [player]
@@ -279,7 +279,7 @@ commands:
   list:
     description: List all online players.
     usage: /<command> [group]
-    aliases: [elist,online,eonline,playerlist,eplayerlist,plist,eplist,who,ewho]
+    aliases: [elist]
   loom:
     description: Opens up a loom.
     usage: /<command>
