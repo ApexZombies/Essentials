@@ -27,6 +27,32 @@ The following file was edited as shown, in these sections:
     aliases: [elist]
 ```
 ---
+#### ``/Essentials/src/main/resources/book.txt``
+The following file was edited as shown:
+```txt
+This is the book file.
+
+This file format works similar to the info.txt, motd.txt and rules.txt
+
+Place content in here that you would like to be used by books ingame.
+You can use this content by using the book:<section> meta option in kits or item spawning.
+
+
+
+#Colors
+Minecraft colors:
+&0 &&0  &1 &&1  &2 &&2  &3 &&3
+&4 &&4  &5 &&5  &6 &&6  &7 &&7
+&8 &&8  &9 &&9  &a &&a  &b &&b
+&c &&c  &d &&d  &e &&e  &f &&f
+&0 
+&&k &kMagic&0   &&l &lBold&0
+&0 
+&&m &mStrike&0  &&n &nUline&0
+&0 
+&&o &oItalic&0   &&r &rReset&0
+```
+---
 #### ``/Essentials/src/main/resources/custom_items.yml``
 The following file was edited as shown:
 ```yml
