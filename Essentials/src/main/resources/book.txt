@@ -3,8 +3,11 @@ This is the book file.
 This file format works similar to the info.txt, motd.txt and rules.txt
 
 Place content in here that you would like to be used by books ingame.
-
 You can use this content by using the book:<section> meta option in kits or item spawning.
+
+
+
+
 
 #Colors
 Minecraft colors:
@@ -13,6 +16,8 @@ Minecraft colors:
 &8 &&8  &9 &&9  &a &&a  &b &&b
 &c &&c  &d &&d  &e &&e  &f &&f
 &0 
-&&k &kMagic&r   &&l &lBold&r
-&&m &mStrike&r  &&n &nUline&r
-&&o &oItalic&r   &&r &rReset
+&&k &kMagic&0   &&l &lBold&0
+&0 
+&&m &mStrike&0  &&n &nUline&0
+&0 
+&&o &oItalic&0   &&r &rReset&0
