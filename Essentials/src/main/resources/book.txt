@@ -7,8 +7,6 @@ You can use this content by using the book:<section> meta option in kits or item
 
 
 
-
-
 #Colors
 Minecraft colors:
 &0 &&0  &1 &&1  &2 &&2  &3 &&3
