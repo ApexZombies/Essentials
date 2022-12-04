@@ -2,6 +2,16 @@
 # NOTE: If you try and alias an item to another entry in this file, the alias won't work.
 
 aliases:
-  bluepaint: blue_dye
-  snad: sand
-  breakfast: cooked_porkchop
+  fse: fermented_spider_eye
+  fspidereye: fermented_spider_eye
+  gms: glistering_melon_slice
+  gmelon: glistering_melon_slice
+  button: stone_button
+  sign: oak_sign
+  log: oak_log
+  planks: oak_planks
+  slab: oak_slab
+  fence: oak_fence
+  trapdoor: oak_trapdoor
+  door: oak_door
+  boat: oak_boat
