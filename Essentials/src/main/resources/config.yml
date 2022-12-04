@@ -24,14 +24,13 @@
 
 # A color code between 0-9 or a-f. Set to 'none' to disable.
 # In 1.16+ you can use hex color codes here as well. (For example, #613e1d is brown).
-ops-name-color: '4'
+ops-name-color: 'none'
 
 # The character(s) to prefix all nicknames, so that you know they are not true usernames.
-# Users with essentials.nick.hideprefix will not be prefixed with the character(s)
-nickname-prefix: '~'
+nickname-prefix: ''
 
-# The maximum length allowed in nicknames. The nickname prefix is not included in this.
-max-nick-length: 15
+# The maximum length allowed in nicknames. The nickname prefix is included in this.
+max-nick-length: 16
 
 # A list of phrases that cannot be used in nicknames. You can include regular expressions here.
 # Users with essentials.nick.blacklist.bypass will be able to bypass this filter.
@@ -41,7 +40,7 @@ nick-blacklist:
 
 # When this option is enabled, nickname length checking will exclude color codes in player names.
 # ie: "&6Notch" has 7 characters (2 are part of a color code), a length of 5 is used when this option is set to true
-ignore-colors-in-max-nick-length: false
+ignore-colors-in-max-nick-length: true
 
 # When this option is enabled, display names for hidden users will not be shown. This prevents players from being
 # able to see that they are online while vanished.
@@ -99,13 +98,13 @@ teleport-delay: 0
 
 # The delay, in seconds, a player can't be attacked by other players after they have been teleported by a command.
 # This will also prevent the player attacking other players.
-teleport-invulnerability: 4
+teleport-invulnerability: 5
 
 # Whether to make all teleportations go to the center of the block; where the x and z coordinates decimal become .5
 teleport-to-center: true
 
 # The delay, in seconds, required between /heal or /feed attempts.
-heal-cooldown: 60
+heal-cooldown: 300
 
 # Do you want to remove potion effects when healing a player?
 remove-effects-on-heal: true
@@ -134,7 +133,7 @@ item-spawn-blacklist:
 #  - essentials.unlimited.item-bucket # Unlimited liquid placing
 #
 # For more information, visit http://wiki.ess3.net/wiki/Command_Reference/ICheat#Item.2FGive
-permission-based-item-spawn: false
+permission-based-item-spawn: true
 
 # Mob limit on the /spawnmob command per execution.
 spawnmob-limit: 10
@@ -143,11 +142,11 @@ spawnmob-limit: 10
 warn-on-smite: true
 
 # Shall we drop items instead of adding to inventory if the target inventory is full?
-drop-items-if-full: false
+drop-items-if-full: true
 
 # Essentials Mail Notification
 # Should we notify players if they have no new mail?
-notify-no-new-mail: true
+notify-no-new-mail: false
 
 # Specifies the duration (in seconds) between each time a player is notified of mail they have.
 # Useful for servers with a lot of mail traffic.
@@ -182,28 +181,7 @@ verbose-command-usages: true
 # You can add commands from other plugins you may want to track or
 # remove commands that are used for something you dont want to spy on.
 # Set - '*' in order to listen on all possible commands.
-socialspy-commands:
-  - msg
-  - w
-  - r
-  - mail
-  - m
-  - t
-  - whisper
-  - emsg
-  - tell
-  - er
-  - reply
-  - ereply
-  - email
-  - action
-  - describe
-  - eme
-  - eaction
-  - edescribe
-  - etell
-  - ewhisper
-  - pm
+socialspy-commands: []
 
 # Whether the private and public messages from muted players should appear in the social spy.
 # If so, they will be differentiated from those sent by normal players.
@@ -211,7 +189,7 @@ socialspy-listen-muted-players: true
 
 # Whether social spy should spy on private messages or just the commands from the list above.
 # If false, social spy will only monitor commands from the list above.
-socialspy-messages: true
+socialspy-messages: false
 
 # The following settings listen for when a player changes worlds.
 # If you use another plugin to control speed and flight, you should change these to false.
@@ -229,11 +207,8 @@ world-change-speed-reset: true
 # These commands will be disabled when a player is muted.
 # Use '*' to disable every command.
 # Essentials already disabled Essentials messaging commands by default.
-# It only cares about the root command, not args after that (it sees /f chat the same as /f)
-mute-commands:
-  - f
-  - kittycannon
- # - '*'
+# It only cares about the root command, not args after that (it sees "/f chat" the same as "/f")
+mute-commands: []
 
 # If you do not wish to use a permission system, you can define a list of 'player perms' below.
 # This list has no effect if you are using a supported permissions system.
@@ -284,7 +259,6 @@ player-commands:
   - protect
   - r
   - rules
-  - renamehome
   - realname
   - seen
   - sell
@@ -332,10 +306,10 @@ use-bukkit-permissions: true
 
 # When this option is enabled, one-time use kits (ie. delay < 0) will be
 # removed from the /kit list when a player can no longer use it
-skip-used-one-time-kits-from-kit-list: false
+skip-used-one-time-kits-from-kit-list: true
 
 # When enabled, armor from kits will automatically be equipped as long as the player's armor slots are empty.
-kit-auto-equip: false
+kit-auto-equip: true
 
 # Determines the functionality of the /createkit command.
 # If this is true, /createkit will give the user a link with the kit code.
@@ -359,35 +333,35 @@ use-nbt-serialization-in-createkit: false
 # Color is not an actual sign, it's for enabling using color codes on signs, when the correct permissions are given.
 
 enabledSigns:
-  #- color
-  #- balance
-  #- buy
-  #- sell
-  #- trade
-  #- free
-  #- warp
-  #- kit
-  #- mail
-  #- enchant
-  #- gamemode
-  #- heal
-  #- info
-  #- spawnmob
-  #- repair
-  #- time
-  #- weather
-  #- anvil
-  #- cartography
-  #- disposal
-  #- grindstone
-  #- loom
-  #- smithing
-  #- workbench
+  - color
+  - balance
+  - buy
+  - sell
+  - trade
+  - free
+  - warp
+  - kit
+  - mail
+  - enchant
+  - gamemode
+  - heal
+  - info
+  - spawnmob
+  - repair
+  - time
+  - weather
+  - anvil
+  - cartography
+  - disposal
+  - grindstone
+  - loom
+  - smithing
+  - workbench
 
 # How many times per second can Essentials signs be interacted with per player.
 # Values should be between 1-20, 20 being virtually no lag protection.
 # Lower numbers will reduce the possibility of lag, but may annoy players.
-sign-use-per-second: 4
+sign-use-per-second: 6
 
 # Allow item IDs on pre-existing signs on 1.13 and above.
 # You cannot use item IDs on new signs, but this will allow players to interact with signs that
@@ -418,7 +392,7 @@ backup:
   #command: 'rdiff-backup World1 backups/World1'
 
 # Set this true to enable permission per warp.
-per-warp-permission: false
+per-warp-permission: true
 
 # Sort output of /list command by groups.
 # You can hide and merge the groups displayed in /list by defining the desired behaviour here.
@@ -426,13 +400,15 @@ per-warp-permission: false
 list:
     # To merge groups, list the groups you wish to merge
     #Staff: owner admin moderator
-    Admins: owner admin
     # To limit groups, set a max user limit
     #builder: 20
     # To hide groups, set the group as hidden
     #default: hidden
     # Uncomment the line below to simply list all players with no grouping
     #Players: '*'
+    
+    # Player list
+    Users: '*'
 
 # Displays real names in /list next to players who are using a nickname.
 real-names-on-list: false
@@ -460,7 +436,7 @@ auto-afk: 300
 # After this timeout in seconds, the user will be kicked from the server.
 # essentials.afk.kickexempt node overrides this feature.
 # Set to -1 for no timeout.
-auto-afk-kick: -1
+auto-afk-kick: 900
 
 # Set this to true, if you want to freeze the player, if the player is AFK.
 # Other players or monsters can't push the player out of AFK mode then.
@@ -470,7 +446,7 @@ freeze-afk-players: false
 
 # When the player is AFK, should he be able to pickup items?
 # Enable this, when you don't want people idling in mob traps.
-disable-item-pickup-while-afk: false
+disable-item-pickup-while-afk: true
 
 # This setting controls if a player is marked as active on interaction.
 # When this setting is false, the player would need to manually un-AFK using the /afk command.
@@ -502,7 +478,7 @@ afk-list-name: "none"
 # When a player enters or exits AFK mode, should the AFK notification be broadcast
 # to the entire server, or just to the player?
 # When this setting is false, only the player will be notified upon changing their AFK state.
-broadcast-afk-message: true
+broadcast-afk-message: false
 
 # You can disable the death messages of Minecraft here.
 death-messages: true
@@ -538,8 +514,8 @@ allow-silent-join-quit: false
 # {ONLINE} - The number of players online.
 # {UNIQUE} - The number of unique players to join the server.
 # {UPTIME} - The amount of time the server has been online.
-custom-join-message: "none"
-custom-quit-message: "none"
+custom-join-message: ""
+custom-quit-message: ""
 
 # You can set a custom join message for users who join with a new username here.
 # This message will only be used if a user has joined before and have since changed their username.
@@ -568,7 +544,8 @@ hide-join-quit-messages-above: -1
 
 # Add worlds to this list, if you want to automatically disable god mode there.
 no-god-in-worlds:
-#  - world_nether
+#- world_nether
+#- world_the_end
 
 # Set to true to enable per-world permissions for teleporting between worlds with essentials commands.
 # This applies to /world, /back, /tp[a|o][here|all], but not warps.
@@ -593,7 +570,7 @@ repair-enchanted: true
 
 # Allow 'unsafe' enchantments in kits and item spawning.
 # Warning: Mixing and overleveling some enchantments can cause issues with clients, servers and plugins.
-unsafe-enchantments: false
+unsafe-enchantments: true
 
 # The maximum range from the player that the /tree and /bigtree commands can spawn trees.
 tree-command-range-limit: 300
@@ -642,7 +619,7 @@ last-message-reply-vanished: false
 milk-bucket-easter-egg: true
 
 # Toggles whether or not the fly status message should be sent to players on join
-send-fly-enable-on-join: true
+send-fly-enable-on-join: false
 
 # Set to true to enable per-world permissions for setting time for individual worlds with essentials commands.
 # This applies to /time, /day, /eday, /night, /enight, /etime.
@@ -682,13 +659,13 @@ allow-selling-named-items: false
 # Delay for the MOTD display for players on join, in milliseconds.
 # This has no effect if the MOTD command or permission are disabled.
 # This can also be set to -1 to completely disable the join MOTD all together.
-delay-motd: 0
+delay-motd: -1
 
 # A list of commands that should have their complementary confirm commands enabled by default.
 # This is empty by default, for the latest list of valid commands see the latest source config.yml.
 default-enabled-confirm-commands:
+- clearinventory
 #- pay
-#- clearinventory
 
 # Where should Essentials teleport players when they are freed from jail?
 # You can set to "back" to have them teleported to where they were before they were jailed, "spawn" to have them
@@ -759,13 +736,19 @@ world-home-permissions: false
 # To grant different home amounts to different people, you need to define a 'home-rank' below.
 # Create the 'home-rank' below, and give the matching permission: essentials.sethome.multiple.<home-rank>
 # For more information, visit http://wiki.ess3.net/wiki/Multihome
-sethome-multiple:
-  default: 3
-  vip: 5
-  staff: 10
 
-# In this example someone with 'essentials.sethome.multiple' and 'essentials.sethome.multiple.vip' will have 5 homes.
 # Remember, they MUST have both permission nodes in order to be able to set multiple homes.
+# Those permission nodes are 'essentials.sethome.multiple' and 'essentials.sethome.multiple.<home-rank>'
+
+#sethome-multiple:
+  #rank1: 5
+  #rank2: 10
+  #rank3: 20
+  #rank4: 35
+
+sethome-multiple:
+  default: 0
+
 
 # Controls whether players need the permission "essentials.home.compass" in order to point
 # the player's compass at their first home.
@@ -779,7 +762,7 @@ compass-towards-home-perm: false
 spawn-if-no-home: true
 
 # Should players be asked to provide confirmation for homes which they attempt to overwrite?
-confirm-home-overwrite: false
+confirm-home-overwrite: true
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -817,10 +800,10 @@ max-money: 10000000000000
 
 # Set the minimum amount of money a player can have (must be above the negative of max-money).
 # Setting this to 0, will disable overdrafts/loans completely.  Users need 'essentials.eco.loan' perm to go below 0.
-min-money: -10000
+min-money: 0
 
 # Enable this to log all interactions with trade/buy/sell signs and sell command.
-economy-log-enabled: false
+economy-log-enabled: true
 
 # Enable this to also log all transactions from other plugins through Vault.
 # This can cause the economy log to fill up quickly so should only be enabled for testing purposes!
@@ -835,7 +818,7 @@ pay-excludes-ignore-list: false
 # Whether or not users with a balance less than or equal to $0 should be shown in balance-top.
 # Setting to false will not show people with balances <= 0 in balance-top.
 # NOTE: After reloading the config, you must also run '/baltop force' for this to appear
-show-zero-baltop: true
+show-zero-baltop: false
 
 # The format of currency, excluding symbols. See currency-symbol-format-locale for symbol configuration.
 #
@@ -857,7 +840,7 @@ show-zero-baltop: true
 ############################################################
 
 # Show other plugins commands in help.
-non-ess-in-help: true
+non-ess-in-help: false
 
 # Hide plugins which do not give a permission.
 # You can override a true value here for a single plugin by adding a permission to a user/group.
@@ -903,7 +886,7 @@ chat:
   # {TEAMPREFIX} - The sender's scoreboard team prefix.
   # {TEAMSUFFIX} - The sender's scoreboard team suffix.
 
-  format: '<{DISPLAYNAME}> {MESSAGE}'
+  format: '&7{DISPLAYNAME}&8:&r {MESSAGE}'
   #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
   #format: '&7{PREFIX}&r {DISPLAYNAME}&r &7{SUFFIX}&r: {MESSAGE}'
 
@@ -920,8 +903,8 @@ chat:
   # World aliases allow you to replace the world name with something different in the chat format.
   # If you are using world aliases, make sure to remove the '#' at the start to allow the setting to be read.
   world-aliases:
-  #  plots: "&dP&r"
-  #  creative: "&eC&r"
+  #  plot_world: "&dP&r"
+  #  creative_world: "&eC&r"
 
   # Whether players should be placed into shout mode by default.
   shout-default: false
@@ -1140,16 +1123,16 @@ newbies:
   # If so, use this format, replacing {DISPLAYNAME} with the player name.
   # If not, set to ''
   #announce-format: ''
-  announce-format: '&dWelcome {DISPLAYNAME}&d to the server!'
+  announce-format: ''
 
   # When we spawn for the first time, which spawnpoint do we use?
   # Set to "none" if you want to use the spawn point of the world.
-  spawnpoint: newbies
+  spawnpoint: default
 
   # Do we want to give users anything on first join? Set to '' to disable
   # This kit will be given regardless of cost and permissions, and will not trigger the kit delay.
-  #kit: ''
-  kit: tools
+  #kit: newcomers
+  kit: ''
 
 # What priority should we use for handling respawns?
 # Set this to none, if you want vanilla respawning behaviour.
@@ -1170,7 +1153,7 @@ respawn-at-home: false
 
 # When users die, should they respawn at their bed instead of the spawnpoint?
 # The value of respawn-at-home (above) has to be true.
-respawn-at-home-bed: true
+respawn-at-home-bed: false
 
 # When users die, should EssentialsSpawn respect users' respawn anchors?
 respawn-at-anchor: false
